@@ -12,7 +12,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { ProductService } from './Service/product.service';
 import { ProductcrudComponent } from './productcrud/productcrud.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; //Http service
 import { ApidataComponent } from './apidata/apidata.component';
 import { ApiService } from './Service/api.service';
 

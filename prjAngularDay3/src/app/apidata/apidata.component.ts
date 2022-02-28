@@ -11,12 +11,13 @@ export class ApidataComponent implements OnInit {
   constructor(private aservice:ApiService) { }
 
   ngOnInit() {
-    //this.getdatafromapiservice();
+    this.getdatafromapiservice();
   }
 
+  apidata;
   getdatafromapiservice()
   {
-    this.aservice.togetdata();
+   this.aservice.togetdata().subscribe((data=>{console.table(data),this.apidata=data}));
   }
 
 }
