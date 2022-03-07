@@ -14,7 +14,7 @@ export class ApidataComponent implements OnInit {
     this.getdatafromapiservice();
   }
 
-  apidata;
+  apidata:any;
   getdatafromapiservice()
   {
    this.aservice.togetdata().subscribe((data=>{console.table(data),this.apidata=data}));

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PrjMvcDay2.Models.Category>
+@{
+    ViewData["Title"] = "GetCategory";
+}
+
+<h1>GetCategory</h1>
+
+@foreach (var item in Model)
+{
+    <li>@item.CategoryId</li>
+    <li>@item.CategoryName</li>
+    <li>@item.Description</li>
+    <br/>
+}

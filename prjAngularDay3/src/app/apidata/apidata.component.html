@@ -1,3 +1,9 @@
 <p>apidata works!</p>
 
-{{apidata|json}}
+<!-- {{apidata|json}} -->
+
+<ul *ngFor="let a of apidata">
+    <li>{{a.id}}</li>
+    <li>{{a.title}}</li>
+
+</ul>

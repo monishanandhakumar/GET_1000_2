@@ -1,0 +1,58 @@
+Git
+
+push -local repo to remote repo
+
+pull -from remote repo to local repo
+
+git add file --specific file
+
+git add -A --project
+
+git add . --
+
+
+
+1:git init 
+
+2:git config user.name "your name in github account"
+
+3:git config user.email "your email in github account"
+
+4:git status 
+
+5:git add . 
+
+6.git commit -m "Message"
+
+7.git remote add origin <git repo url>
+
+8.git push origin master
+
+9.git pull origin master
+
+to create branch
+
+10.git branch branchname
+
+To Move to that branch
+
+11.git checkout branchname
+
+to push the data from branch it has to be done from master 
+12.git push origin branchname
+
+13.git pull origin branchname
+
+to merge with master branch
+14.git merge branchname
+
+to delete from local repo
+15.git branch -d branchname
+
+to delete branch  from remote repo
+16.git push origin --delete branchname
+
+
+
+
+

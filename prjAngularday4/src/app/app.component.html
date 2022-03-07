@@ -1,0 +1,10 @@
+<h1>Parent Component</h1>
+
+Child Name:{{mychildname}} <br>
+
+Hobby:{{myhobby}}
+<hr>
+            <!--passing value to child-->           <!--receiving value from child on click event-->
+
+
+<app-child [inputfromparent]="username" (outputfromchild)=" receivechilddata($event)" (sendvalue)="receivehobby($event)"></app-child>

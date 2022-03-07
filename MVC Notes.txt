@@ -1,0 +1,22 @@
+.Netcore 
+-------
+--work async  -->async and await()
+
+ASP-- ActivexServerPage
+
+View -cs+html-->.cshtml .-Razorpage --Razorengine
+
+Controller-Collection of actionmethods
+
+Middleware
+----------
+Middleware --a piece of code helps to work with request and response pipeline
+
+---to call middleware use(),
+--to move from one to another middleware next()
+
+Task:create a  New Asp.net Core application -
+Add a model for Employee,eid,ename,salary and display the list of employee details
+
+
+
