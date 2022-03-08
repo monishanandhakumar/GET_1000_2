@@ -1,0 +1,13 @@
+﻿@model IEnumerable<PrjMvcDay2.Models.Category>
+@{
+    ViewData["Title"] = "Getcatbyname";
+}
+
+<h1>Getcatbyname</h1>
+
+<li>Model</li>
+
+@foreach(var item in ViewBag.cname)
+            {
+                <li>@item</li>
+            }

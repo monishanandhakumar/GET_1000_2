@@ -18,5 +18,114 @@ Middleware --a piece of code helps to work with request and response pipeline
 Task:create a  New Asp.net Core application -
 Add a model for Employee,eid,ename,salary and display the list of employee details
 
+1.Dbfirst approach:
+
+Step 1:
+Packages:
+1.Microsoft.Entityframeworkcore.sqlserver
+2.Microsoft.Entityframeworkcore.tools
+3.Microsoft.Entityframeworkcore.Design
+
+Step 2:
+Build your solution
+
+Step 3:
+Add database to our application via EFCore
+Tools-->Nuget packageManager-->package Manger console-->
+
+Scaffold-DbContext "Server=DESKTOP-U8J1M3C\MSSQLSERVER01;Database=Sample;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Build your solution
+Step 4:
+
+Provide connection string in appsettings.json
+
+"ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-U8J1M3C\\MSSQLSERVER01;Database=Northwind;Trusted_Connection=True;"
+  }
+
+Step 5:
+add the service in startup.cs file
+
+services.AddDbContext<NorthwindContext>(options =>
+      options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+
+Incase of any change in database to reflect in ef core use below command in package manager console
+
+Scaffold-DbContext "Server=DESKTOP-U8J1M3C\MSSQLSERVER01;Database=Northwind;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
+
+Day 3:
+------
+Stored Procedure
+
+1.create a class file in model folder same that of your procedure name and add properties -(column)what procedure returns
+
+2.add create procedure class in NorthwindContext.cs file
+
+ public virtual DbSet<Ten_Most_Expensive_Products> Ten_Most_Expensive_Products { get; set; }
+
+3.Build your solution
+
+
+2. Code first approach
+--------------------
+create a database called Shopping in sqlserver
+
+
+Step 1:
+Packages:
+1.Microsoft.Entityframeworkcore.sqlserver
+2.Microsoft.Entityframeworkcore.tools
+3.Microsoft.Entityframeworkcore.Design
+
+Step 2:
+Build your solution
+
+Step 3:
+Add database to our application via EFCore
+Tools-->Nuget packageManager-->package Manger console-->
+
+Scaffold-DbContext "Server=DESKTOP-U8J1M3C\MSSQLSERVER01;Database=Shopping;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Build your solution
+Step 4:
+
+Provide connection string in appsettings.json
+
+"ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-U8J1M3C\\MSSQLSERVER01;Database=Shopping;Trusted_Connection=True;"
+  }
+
+Step 5:
+add the service in startup.cs file
+
+services.AddDbContext<NorthwindContext>(options =>
+      options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+6.in Models folder add product.cs with properties
+
+7. create a ShoppingContext.cs file
+
+8.build 
+
+9. Tools-->Nuget packageManager-->package Manger console-->
+
+add-migration initialmigration
+
+update-database
+
+
+In case of any changes
+
+
+add-migration  <userdedined name>
+
+update-database
+
 
 

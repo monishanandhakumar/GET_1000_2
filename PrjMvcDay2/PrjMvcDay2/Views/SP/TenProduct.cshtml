@@ -1,0 +1,12 @@
+﻿@model IEnumerable<PrjMvcDay2.Models.Ten_Most_Expensive_Products>
+@{
+    ViewData["Title"] = "TenProduct";
+}
+
+<h1>TenProduct</h1>
+
+@foreach (var item in Model)
+{
+    <li>@item.TenMostExpensiveProducts</li>
+    <li>@item.UnitPrice</li>
+}
