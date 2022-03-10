@@ -128,4 +128,26 @@ add-migration  <userdedined name>
 update-database
 
 
+Day -4
+------
+
+Model validation 
+
+MVC
+----
+
+1. HTML Helper ,2.Tag Helper
+
+Tag Helper
+-----------
+
+Uses:
+
+Tag Helpers use server-side binding without any server-side code.
+
+This helper object is very much use full when HTML developers do the UI designing who does not have any idea or concept about Razor syntax.
+
+It provides us an experience of working on basic HTML environments.the
+
+It Supports rich IntelliSense environment support to create a markup between HTML and Razor
 

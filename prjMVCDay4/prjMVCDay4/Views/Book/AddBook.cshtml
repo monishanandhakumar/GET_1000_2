@@ -1,0 +1,48 @@
+﻿@model prjMVCDay4.MyModel.Book
+@{
+    ViewData["Title"] = "AddBook";
+}
+
+<h1>AddBook</h1>
+
+<div>
+    <form method="post" asp-action="AddBook" asp-controller="Book">
+        <div>
+            <label asp-for="BookName"></label>
+            <input asp-for="BookName" />
+        </div>
+        <div>
+            <label asp-for="Author"></label>
+            <input asp-for="Author" />
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <input asp-for="Price" />
+        </div>
+        <div>
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" cols="60"></textarea>
+        </div>
+
+        <div>
+            <label asp-for="BookType"></label>
+            <select asp-for="BookType">
+                <option value="C">Comic</option>
+                <option value="A">Action</option>
+                <option value="T">Thriller</option>
+
+            </select>
+        </div>
+        <div>
+            <button class="btn btn-primary">Add Book</button>
+        </div>
+    </form>
+
+    <div>
+        <img src="~/image/chocolate.jpeg" />
+
+    </div>
+
+   
+
+</div>

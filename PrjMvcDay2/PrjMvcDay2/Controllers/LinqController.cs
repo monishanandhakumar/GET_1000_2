@@ -57,6 +57,13 @@ namespace PrjMvcDay2.Controllers
                         return View();
         }
 
+        public IActionResult Northwind_Assignment()
+        {
+            //Query syntax
+            var fullname = (from e in db.Employees
+                            select e.FirstName+ " "+e.LastName).ToList();
+            return View();
+        }
 
     }
 }
