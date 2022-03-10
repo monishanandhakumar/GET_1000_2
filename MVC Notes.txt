@@ -1,8 +1,19 @@
+ASP.Net
+-------
+--Tightly Coupled
+
+--Webform-->HTML, Aspx.cs
+
+
+
 .Netcore 
 -------
 --work async  -->async and await()
 
 ASP-- ActivexServerPage
+
+MVC--Separation of concern
+--loosely coupled
 
 View -cs+html-->.cshtml .-Razorpage --Razorengine
 
@@ -89,7 +100,7 @@ Step 3:
 Add database to our application via EFCore
 Tools-->Nuget packageManager-->package Manger console-->
 
-Scaffold-DbContext "Server=DESKTOP-U8J1M3C\MSSQLSERVER01;Database=Shopping;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "Server=DESKTOP-U8J1M3C\MSSQLSERVER01;Database=Northwind;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 Build your solution
 Step 4:
@@ -150,4 +161,43 @@ This helper object is very much use full when HTML developers do the UI designin
 It provides us an experience of working on basic HTML environments.the
 
 It Supports rich IntelliSense environment support to create a markup between HTML and Razor
+
+
+Day 5:
+------
+
+Layout
+
+Routing
+
+1.Conventional Routing  2.Attribute Routing
+
+
+WebAPI
+-----------
+API-Application Programming Interface
+
+--inter application Communication 
+
+HTTP Protocol
+
+Methods
+
+Get --
+Post
+put --Edit
+delete 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
