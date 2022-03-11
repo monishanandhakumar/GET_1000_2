@@ -1,0 +1,18 @@
+<p>category works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th>CategoryName</th>
+        <th>CategoryDescription</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let c of categoryinfo">
+      <tr>
+        <td>{{c.categoryName}}</td>
+        <td>{{c.description}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PrjWebAPI1.Models;
 using System;
 using System.Collections.Generic;
@@ -38,9 +39,10 @@ namespace PrjWebAPI1.Controllers
 
         }
 
+        #region Post
         [HttpPost]
 
-        public IActionResult AddCategory(Category category)
+        public IActionResult AddCategory([FromBody]Category category)
         {
             try
             {
@@ -63,5 +65,64 @@ namespace PrjWebAPI1.Controllers
             }
            
         }
+        #endregion
+
+        #region Delete
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletebyid(int? id)
+        {
+            try
+            {
+
+
+                var category = db.Categories.Find(id);
+                if (category != null)
+                {
+                    db.Categories.Remove(category);
+                    db.SaveChanges();
+                    return Ok("Recored Deleted!!!");
+
+                }
+                else
+                {
+                    return NotFound("No Data Found!!");
+                }
+            }
+
+            catch (Exception e)
+            {
+                return Ok("Please try Again!!!");
+            }
+
+        }
+        #endregion
+
+        #region Edit
+        [HttpPut("{id}")]
+        public IActionResult Edit(int? id,[FromBody]Category category)
+        {
+            try
+            {
+                if (id != category.CategoryId)
+                {
+                    return BadRequest();
+                }
+               
+                else
+                {
+                    db.Entry(category).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return Ok("record updated!!!");
+                }
+
+            }
+            catch(Exception e)
+            {
+                return BadRequest(e);
+            }
+
+        }
+        #endregion
     }
 }
