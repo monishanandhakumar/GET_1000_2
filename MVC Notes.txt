@@ -196,7 +196,7 @@ Notfound-- 404
 BadRequest--400
 
 
-
+CORS-Cross origin resource sharing
 
 
 

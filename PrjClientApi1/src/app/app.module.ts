@@ -5,17 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryComponent } from './category/category.component';
 import { CategoryService } from 'src/Service/category.service';
-import { HttpClientModule } from '@angular/common/http'; //Http service
+import { HttpClientModule } from '@angular/common/http';
+import { CategorycrudComponent } from './categorycrud/categorycrud.component'; //Http service
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoryComponent
+    CategoryComponent,
+    CategorycrudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]

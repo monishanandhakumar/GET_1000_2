@@ -39,6 +39,19 @@ namespace PrjWebAPI1.Controllers
 
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetCategory(int id)
+        {
+            var category = db.Categories.Find(id);
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(category);
+        }
+
         #region Post
         [HttpPost]
 
