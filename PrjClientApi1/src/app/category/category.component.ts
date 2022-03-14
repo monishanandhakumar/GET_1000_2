@@ -13,7 +13,7 @@ export class CategoryComponent implements OnInit {
   constructor(private catservice:CategoryService) { }
 
   ngOnInit() {
-    this. fetchCategory();
+    this.fetchCategory();
   }
    
   //Get the category
@@ -29,15 +29,20 @@ export class CategoryComponent implements OnInit {
   result;
   addCategory()
   {
-     this.catservice.insertCategory(this.category).subscribe((data)=>{this.result=data,console.log(this.result)});
+     this.catservice.insertCategory(this.category).subscribe(
+       (data)=>{this.result=data,console.log(this.result)}
+       
+       );
+
   }
 
 //Delete
 msg;
 removeCategory(cid:number)
 {
-  this.catservice.deleteCategory(cid).subscribe((data)=>{this.msg=data,console.log(this.msg)});
-  window.alert("Record Deleted!!!");
+  this.catservice.deleteCategory(cid).subscribe((data)=>{this.msg=data,console.log(this.msg)
+ });
+  
 }
 //get particular category details
 

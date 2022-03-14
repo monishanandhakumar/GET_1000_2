@@ -44,7 +44,7 @@ Step 3:
 Add database to our application via EFCore
 Tools-->Nuget packageManager-->package Manger console-->
 
-Scaffold-DbContext "Server=DESKTOP-U8J1M3C\MSSQLSERVER01;Database=Sample;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Scaffold-DbContext "Server=DESKTOP-U8J1M3C\MSSQLSERVER01;Database=Northwind;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
 Build your solution
 Step 4:

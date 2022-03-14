@@ -29,6 +29,7 @@ export class CategoryService
   deleteCategory(cid:number)
   {
     return this.http.delete(this.uri+'/'+cid);
+    debugger;
   }
 
   //getcategoryby id
